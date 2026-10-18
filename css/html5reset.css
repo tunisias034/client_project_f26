@@ -1,0 +1,108 @@
+/* ==========================================================================
+   html5reset.css
+   A small, modern reset: removes inconsistent browser defaults so that
+   style.css starts from the same baseline in every browser.
+
+   Adapted from:
+   - Josh W. Comeau, "A Modern CSS Reset"
+     https://www.joshwcomeau.com/css/custom-css-reset/
+   - Andy Bell, "A (more) Modern CSS Reset"
+     https://piccalil.li/blog/a-more-modern-css-reset/
+   - Richard Clark, "HTML5 Reset Stylesheet" (HTML5 Doctor)
+     http://html5doctor.com/html-5-reset-stylesheet/
+   ========================================================================== */
+
+/* 1. Make width/height include padding and border (much easier layouts) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margins; style.css adds spacing back on purpose */
+* {
+  margin: 0;
+}
+
+/* 3. Keep text from resizing oddly when a phone rotates to landscape
+      (100% instead of "none" so users can still zoom) */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* 4. Comfortable default line height and a page that fills the screen */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. HTML5 elements display as blocks (for older browsers) */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+/* 6. Media never overflows its container */
+img,
+picture,
+video,
+canvas,
+svg,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Keep images in proportion when max-width shrinks them
+      (important because the HTML uses width and height attributes) */
+img {
+  height: auto;
+}
+
+/* 8. Form controls use the page font instead of the browser's */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 9. Long words and URLs wrap instead of causing sideways scrolling */
+p,
+li,
+td,
+th,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 10. Tables: no double borders */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 11. Anchored sections (#preparing, #main) don't hug the top edge */
+:target {
+  scroll-margin-block: 2rem;
+}
+
+/* 12. The hidden attribute always hides */
+[hidden] {
+  display: none !important;
+}
